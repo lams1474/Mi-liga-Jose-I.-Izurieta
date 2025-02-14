@@ -1,49 +1,35 @@
-/* Estilos generales */
+/* Fondo de toda la página */
 body {
+    background-color: #f0f8ff; /* Color azul claro */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
+/* Fondo del encabezado */
 header {
-    background-color: #333;
+    background-color: #333; /* Color gris oscuro */
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Fondo del pie de página */
 footer {
-    background-color: #333;
+    background-color: #333; /* Color gris oscuro */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Fondo de las secciones */
+section {
+    background-color: white; /* Fondo blanco para las secciones */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
