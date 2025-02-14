@@ -19,7 +19,7 @@ header {
 }
 
 header .logo {
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 150px; /* Tamaño del logo */
     height: auto;
 }
 
@@ -38,14 +38,16 @@ section {
     justify-content: space-around;
     align-items: center;
     margin: 10px 0;
+    flex-wrap: wrap; /* Ajusta los elementos en pantallas pequeñas */
 }
 
 .equipo {
     text-align: center;
+    margin: 5px; /* Espaciado entre equipos */
 }
 
 .equipo img {
-    width: 50px;
+    width: 50px; /* Tamaño de los sellos */
     height: auto;
 }
 
@@ -54,15 +56,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-}
-
-table, th, td {
-    border: 1px solid #333;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    display: block; /* Hace que la tabla sea un bloque */
 }
 
 th, td {
     padding: 10px;
     text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 /* Pie de página */
@@ -74,4 +75,24 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    header .logo {
+        width: 100px; /* Reduce el logo en móviles */
+    }
+
+    .equipo img {
+        width: 40px; /* Reduce el tamaño de los sellos en móviles */
+    }
+
+    table {
+        font-size: 12px; /* Reduce el tamaño de la fuente en las tablas */
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
 }
