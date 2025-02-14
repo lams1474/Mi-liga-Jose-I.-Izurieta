@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Deportiva</title>
+    <title>Liga Deportiva</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Encabezado -->
+    <!-- Encabezado con logo -->
     <header>
-        <h1>Mi Página Deportiva</h1>
-        <nav>
-            <ul>
-                <li><a href="#calendarios">Calendarios</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#tabla-posiciones">Tabla de Posiciones</a></li>
-                <li><a href="#estadisticas">Estadísticas</a></li>
-                <li><a href="#reglamentos">Reglamentos</a></li>
-            </ul>
-        </nav>
+        <img src="images/logo-liga.png" alt="Logo de la Liga" class="logo">
+        <h1>Liga Deportiva</h1>
     </header>
 
     <!-- Sección de bienvenida -->
     <section id="bienvenida">
-        <h2>Bienvenido a Mi Página Deportiva</h2>
-        <p>Aquí encontrarás toda la información sobre los encuentros deportivos, resultados, estadísticas y más.</p>
+        <h2>Bienvenido a la Liga Deportiva</h2>
+        <p>Aquí encontrarás toda la información sobre los encuentros, resultados, estadísticas y más.</p>
+    </section>
+
+    <!-- Enlaces rápidos -->
+    <section id="enlaces-rapidos">
+        <h2>Acceso Rápido</h2>
+        <div>
+            <a href="#calendarios">Calendarios</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#tabla-posiciones">Tabla de Posiciones</a>
+            <a href="#estadisticas">Estadísticas</a>
+        </div>
     </section>
 
     <!-- Calendarios -->
     <section id="calendarios">
         <h2>Calendarios</h2>
-        <p>Próximos encuentros:</p>
-        <ul>
-            <li>Equipo A vs Equipo B - 10/10/2023</li>
-            <li>Equipo C vs Equipo D - 12/10/2023</li>
-        </ul>
+        <div class="partido">
+            <div class="equipo">
+                <img src="images/sello-club1.png" alt="Sello Club 1">
+                <p>Club 1</p>
+            </div>
+            <div class="info-partido">
+                <p>10/10/2023</p>
+                <p>15:00</p>
+            </div>
+            <div class="equipo">
+                <img src="images/sello-club2.png" alt="Sello Club 2">
+                <p>Club 2</p>
+            </div>
+        </div>
+        <!-- Repite este bloque para cada partido -->
     </section>
 
     <!-- Resultados -->
     <section id="resultados">
         <h2>Resultados</h2>
-        <p>Últimos resultados:</p>
-        <ul>
-            <li>Equipo A 2 - 1 Equipo B</li>
-            <li>Equipo C 0 - 3 Equipo D</li>
-        </ul>
+        <div class="partido">
+            <div class="equipo">
+                <img src="images/sello-club1.png" alt="Sello Club 1">
+                <p>Club 1</p>
+            </div>
+            <div class="info-partido">
+                <p>2 - 1</p>
+            </div>
+            <div class="equipo">
+                <img src="images/sello-club2.png" alt="Sello Club 2">
+                <p>Club 2</p>
+            </div>
+        </div>
+        <!-- Repite este bloque para cada resultado -->
     </section>
 
     <!-- Tabla de Posiciones -->
@@ -58,24 +80,33 @@
                     <th>PG</th>
                     <th>PE</th>
                     <th>PP</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DG</th>
                     <th>Puntos</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Equipo A</td>
+                    <td>Club 1</td>
                     <td>5</td>
                     <td>4</td>
                     <td>1</td>
                     <td>0</td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>+7</td>
                     <td>13</td>
                 </tr>
                 <tr>
-                    <td>Equipo B</td>
+                    <td>Club 2</td>
                     <td>5</td>
                     <td>3</td>
                     <td>2</td>
                     <td>0</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>+4</td>
                     <td>11</td>
                 </tr>
             </tbody>
@@ -86,38 +117,19 @@
     <section id="estadisticas">
         <h2>Estadísticas</h2>
         <div>
-            <h3>Tarjetas Amarillas</h3>
-            <ul>
-                <li>Jugador 1 - 3 tarjetas</li>
-                <li>Jugador 2 - 2 tarjetas</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Tarjetas Rojas</h3>
-            <ul>
-                <li>Jugador 3 - 1 tarjeta</li>
-            </ul>
-        </div>
-        <div>
             <h3>Goleadores</h3>
-            <ul>
-                <li>Jugador 4 - 5 goles</li>
-                <li>Jugador 5 - 4 goles</li>
+            <ul id="goleadores">
+                <!-- Los goleadores se cargarán dinámicamente con JavaScript -->
             </ul>
         </div>
-    </section>
-
-    <!-- Reglamentos -->
-    <section id="reglamentos">
-        <h2>Reglamentos</h2>
-        <p>Consulta los reglamentos de la competencia:</p>
-        <a href="reglamentos.pdf" target="_blank">Descargar Reglamentos</a>
     </section>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2025 Mi Página Deportiva</p>
-        <p>Contacto: info@mipaginadeportiva.com</p>
+        <p>&copy; 2023 Liga Deportiva</p>
+        <p>Contacto: info@ligadeportiva.com</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
