@@ -1,68 +1,14 @@
-// Datos de goleadores
-const goleadoresHombres = [
-    { nombre: "Jugador 1", goles: 5 },
-    { nombre: "Jugador 2", goles: 4 },
-];
-
-const goleadoresMujeres = [
-    { nombre: "Jugadora 1", goles: 5 },
-    { nombre: "Jugadora 2", goles: 4 },
-];
-
-const goleadoresFutsalHombres = [
-    { nombre: "Jugador 1", goles: 5 },
-    { nombre: "Jugador 2", goles: 4 },
-];
-
-const goleadoresFutsalMujeres = [
-    { nombre: "Jugadora 1", goles: 5 },
-    { nombre: "Jugadora 2", goles: 4 },
-];
-
-// Datos de tarjetas amarillas y rojas
-const tarjetasHombres = {
-    amarillas: [
-        { jugador: "Jugador 1", tarjetas: 3 },
-        { jugador: "Jugador 2", tarjetas: 2 },
-    ],
-    rojas: [
-        { jugador: "Jugador 3", tarjetas: 1 },
-    ],
-};
-
-const tarjetasMujeres = {
-    amarillas: [
-        { jugador: "Jugadora 1", tarjetas: 3 },
-        { jugador: "Jugadora 2", tarjetas: 2 },
-    ],
-    rojas: [
-        { jugador: "Jugadora 3", tarjetas: 1 },
-    ],
-};
-
-const tarjetasFutsalHombres = {
-    amarillas: [
-        { jugador: "Jugador 1", tarjetas: 3 },
-        { jugador: "Jugador 2", tarjetas: 2 },
-    ],
-    rojas: [
-        { jugador: "Jugador 3", tarjetas: 1 },
-    ],
-};
-
-const tarjetasFutsalMujeres = {
-    amarillas: [
-        { jugador: "Jugadora 1", tarjetas: 3 },
-        { jugador: "Jugadora 2", tarjetas: 2 },
-    ],
-    rojas: [
-        { jugador: "Jugadora 3", tarjetas: 1 },
-    ],
+// Datos de goleadores y tarjetas
+let goleadoresHombres = [];
+let tarjetasHombres = {
+    amarillas: [],
+    rojas: [],
 };
 
 // Función para mostrar goleadores
 function mostrarGoleadores(goleadores, elementoId) {
     const listaGoleadores = document.getElementById(elementoId);
+    listaGoleadores.innerHTML = ""; // Limpiar la lista
     goleadores.forEach(goleador => {
         const item = document.createElement("li");
         item.textContent = `${goleador.nombre}: ${goleador.goles} goles`;
@@ -94,14 +40,45 @@ function mostrarTarjetas(tarjetas, elementoIdAmarillas, elementoIdRojas) {
     });
 }
 
-// Cargar goleadores
-mostrarGoleadores(goleadoresHombres, "goleadores-hombres");
-mostrarGoleadores(goleadoresMujeres, "goleadores-mujeres");
-mostrarGoleadores(goleadoresFutsalHombres, "goleadores-futsal-hombres");
-mostrarGoleadores(goleadoresFutsalMujeres, "goleadores-futsal-mujeres");
+// Cargar datos desde el archivo JSON
+fetch('datos.json')
+    .then(response => response.json())
+    .then(data => {
+        // Mostrar goleadores
+        mostrarGoleadores(data.goleadoresHombres, "goleadores-hombres");
 
-// Cargar tarjetas
-mostrarTarjetas(tarjetasHombres, "tarjetas-amarillas-hombres", "tarjetas-rojas-hombres");
-mostrarTarjetas(tarjetasMujeres, "tarjetas-amarillas-mujeres", "tarjetas-rojas-mujeres");
-mostrarTarjetas(tarjetasFutsalHombres, "tarjetas-amarillas-futsal-hombres", "tarjetas-rojas-futsal-hombres");
-mostrarTarjetas(tarjetasFutsalMujeres, "tarjetas-amarillas-futsal-mujeres", "tarjetas-rojas-futsal-mujeres");
+        // Mostrar tarjetas amarillas y rojas
+        mostrarTarjetas(data.tarjetasHombres, "tarjetas-amarillas-hombres", "tarjetas-rojas-hombres");
+    })
+    .catch(error => console.error('Error al cargar los datos:', error));
+
+// Procesar el formulario para ingresar datos
+document.getElementById('formulario-datos').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evitar que el formulario se envíe
+
+    // Obtener los valores del formulario
+    const tipoDato = document.getElementById('tipo-dato').value;
+    const jugador = document.getElementById('jugador').value;
+    const cantidad = parseInt(document.getElementById('cantidad').value);
+
+    // Validar que los campos no estén vacíos
+    if (!tipoDato || !jugador || isNaN(cantidad)) {
+        alert("Por favor, complete todos los campos correctamente.");
+        return;
+    }
+
+    // Agregar los datos según el tipo seleccionado
+    if (tipoDato === "goleador") {
+        goleadoresHombres.push({ nombre: jugador, goles: cantidad });
+        mostrarGoleadores(goleadoresHombres, "goleadores-hombres");
+    } else if (tipoDato === "tarjeta-amarilla") {
+        tarjetasHombres.amarillas.push({ jugador: jugador, tarjetas: cantidad });
+        mostrarTarjetas(tarjetasHombres, "tarjetas-amarillas-hombres", "tarjetas-rojas-hombres");
+    } else if (tipoDato === "tarjeta-roja") {
+        tarjetasHombres.rojas.push({ jugador: jugador, tarjetas: cantidad });
+        mostrarTarjetas(tarjetasHombres, "tarjetas-amarillas-hombres", "tarjetas-rojas-hombres");
+    }
+
+    // Limpiar el formulario
+    document.getElementById('formulario-datos').reset();
+});

@@ -1,0 +1,15 @@
+{
+    "goleadoresHombres": [
+        { "nombre": "Jugador 1", "goles": 5 },
+        { "nombre": "Jugador 2", "goles": 4 }
+    ],
+    "tarjetasHombres": {
+        "amarillas": [
+            { "jugador": "Jugador 1", "tarjetas": 3 },
+            { "jugador": "Jugador 2", "tarjetas": 2 }
+        ],
+        "rojas": [
+            { "jugador": "Jugador 3", "tarjetas": 1 }
+        ]
+    }
+}

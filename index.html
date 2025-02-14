@@ -368,19 +368,19 @@
         <div>
             <h3>Goleadores</h3>
             <ul id="goleadores-hombres">
-                <!-- Los goleadores se cargarán dinámicamente con JavaScript -->
+                <!-- Los goleadores se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Amarillas</h3>
             <ul id="tarjetas-amarillas-hombres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas amarillas se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Rojas</h3>
             <ul id="tarjetas-rojas-hombres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas rojas se cargarán dinámicamente -->
             </ul>
         </div>
     </section>
@@ -391,19 +391,19 @@
         <div>
             <h3>Goleadores</h3>
             <ul id="goleadores-mujeres">
-                <!-- Los goleadores se cargarán dinámicamente con JavaScript -->
+                <!-- Los goleadores se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Amarillas</h3>
             <ul id="tarjetas-amarillas-mujeres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas amarillas se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Rojas</h3>
             <ul id="tarjetas-rojas-mujeres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas rojas se cargarán dinámicamente -->
             </ul>
         </div>
     </section>
@@ -414,19 +414,19 @@
         <div>
             <h3>Goleadores</h3>
             <ul id="goleadores-futsal-hombres">
-                <!-- Los goleadores se cargarán dinámicamente con JavaScript -->
+                <!-- Los goleadores se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Amarillas</h3>
             <ul id="tarjetas-amarillas-futsal-hombres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas amarillas se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Rojas</h3>
             <ul id="tarjetas-rojas-futsal-hombres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas rojas se cargarán dinámicamente -->
             </ul>
         </div>
     </section>
@@ -437,21 +437,43 @@
         <div>
             <h3>Goleadores</h3>
             <ul id="goleadores-futsal-mujeres">
-                <!-- Los goleadores se cargarán dinámicamente con JavaScript -->
+                <!-- Los goleadores se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Amarillas</h3>
             <ul id="tarjetas-amarillas-futsal-mujeres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas amarillas se cargarán dinámicamente -->
             </ul>
         </div>
         <div>
             <h3>Tarjetas Rojas</h3>
             <ul id="tarjetas-rojas-futsal-mujeres">
-                <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                <!-- Las tarjetas rojas se cargarán dinámicamente -->
             </ul>
         </div>
+    </section>
+
+    <!-- Formulario para ingresar datos -->
+    <section id="ingreso-datos">
+        <h2>Ingresar Datos</h2>
+        <form id="formulario-datos">
+            <label for="tipo-dato">Tipo de dato:</label>
+            <select id="tipo-dato" required>
+                <option value="">Seleccione una opción</option>
+                <option value="goleador">Goleador</option>
+                <option value="tarjeta-amarilla">Tarjeta Amarilla</option>
+                <option value="tarjeta-roja">Tarjeta Roja</option>
+            </select>
+
+            <label for="jugador">Jugador:</label>
+            <input type="text" id="jugador" required>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" required>
+
+            <button type="submit">Agregar</button>
+        </form>
     </section>
 
     <!-- Pie de página -->
