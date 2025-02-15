@@ -1,46 +1,98 @@
-/* Estilos para los sellos de los clubes */
-.equipo img {
-    width: 80px; /* Aumenta el tamaño de los sellos */
-    height: auto;
-    margin: 10px; /* Espaciado entre sellos */
+/* Fondo de la página */
+body {
+    background-image: url('images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-/* Estilos para los partidos en el calendario y resultados */
+/* Encabezado */
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* Secciones */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para partidos (calendarios y resultados) */
 .partido {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 10px 0;
+    flex-wrap: wrap; /* Ajusta los elementos en pantallas pequeñas */
+}
+
+.equipo {
+    text-align: center;
+    margin: 5px; /* Espaciado entre equipos */
+}
+
+.equipo img {
+    width: 50px; /* Tamaño de los sellos */
+    height: auto;
+}
+
+/* Tabla de posiciones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    display: block; /* Hace que la tabla sea un bloque */
+}
+
+th, td {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/* Estilos para el formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input, form select, form button {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background-color: #333;
+/* Pie de página */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
     color: white;
-    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-form button:hover {
-    background-color: #555;
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    header .logo {
+        width: 100px; /* Reduce el logo en móviles */
+    }
+
+    .equipo img {
+        width: 40px; /* Reduce el tamaño de los sellos en móviles */
+    }
+
+    table {
+        font-size: 12px; /* Reduce el tamaño de la fuente en las tablas */
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
 }
