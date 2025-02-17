@@ -1,4 +1,4 @@
-/* Fondo de la página */
+/* Estilos para el cuerpo de la página */
 body {
     background-image: url('images/fondo.jpg');
     background-size: cover;
@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    padding-bottom: 60px; /* Margen inferior para el pie de página */
 }
 
 /* Encabezado */
@@ -66,14 +67,14 @@ th, td {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/* Pie de página */
+/* Estilos para el pie de página */
 footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
+    position: relative; /* Cambia a posición relativa */
     bottom: 0;
 }
 
