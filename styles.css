@@ -1,85 +1,98 @@
-cuerpo.
-    familia de fuentes: Arial, sans-serif;
-    margen: 0;
-    acolchado: 0;
-    fondo-color: .f4f4f4f4;
--
+/* Fondo de la página */
+body {
+    background-image: url('images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
-cabecera.
-    de fondo-color: 333,
-    color: "fff";
-    Acolchado: 10px 0;
-    text-align: centro;
--
+/* Encabezado */
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
-cabecera .logo
-    anchura: 100px;
-    altura: automático;
--
+header .logo {
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+}
 
-Sección.
-    margen: 20px;
-    relleno: 20px;
-    fondo-color:
-    radio de frontera: 8px;
-    caja-sombra: 0 0 10px rgbaba(0, 0, 0, 0,1;
--
+/* Secciones */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-h2
-    color: 333,
--
+/* Estilos para partidos (calendarios y resultados) */
+.partido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap; /* Ajusta los elementos en pantallas pequeñas */
+}
 
-la etiqueta de formulario
-    visual: bloque;
-    margen-bajo: 5px;
-    peso de la letra: audaz;
--
+.equipo {
+    text-align: center;
+    margin: 5px; /* Espaciado entre equipos */
+}
 
-entrada de formulario, formulario seleccione, botón de formulario
-    anchura: 100%;
-    acolchado: 10px;
-    margen-bajo: 10px;
-    borde: 1px de sólido Cc;
-    radio de frontera: 4px;
--
+.equipo img {
+    width: 50px; /* Tamaño de los sellos */
+    height: auto;
+}
 
-botón de forma .
-    de fondo-color: 333,
-    color: "fff";
-    frontera: ninguna;
-    cursor: puntero;
--
+/* Tabla de posiciones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    display: block; /* Hace que la tabla sea un bloque */
+}
 
-botón de forma:hover
-    fondo-color: 555;
--
+th, td {
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
 
-.
-    tipo de tipo de lista: ninguno;
-    acolchado: 0;
--
+/* Pie de página */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
-ul li.
-    acolchado: 10px;
-    borde-bajo: 1px sólido de Cc;
--
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    header .logo {
+        width: 100px; /* Reduce el logo en móviles */
+    }
 
-mesa.
-    anchura: 100%;
-    borde-colapso: colapso;
-    margen-top: 20px;
--
+    .equipo img {
+        width: 40px; /* Reduce el tamaño de los sellos en móviles */
+    }
 
-mesa, mesa td.
-    acolchado: 10px;
-    borde: 1px de sólido Cc;
-    text-align: centro;
--
+    table {
+        font-size: 12px; /* Reduce el tamaño de la fuente en las tablas */
+    }
 
-pies de página.
-    de fondo-color: 333,
-    color: "fff";
-    text-align: centro;
-    Acolchado: 10px 0;
-    margen-top: 20px;
--
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+}
