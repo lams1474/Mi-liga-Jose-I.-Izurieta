@@ -92,3 +92,30 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+.enlaces-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.enlace-rectangulo {
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.enlace-rectangulo a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.enlace-rectangulo:hover {
+    background-color: #0056b3;
+}
