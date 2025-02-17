@@ -40,18 +40,6 @@ function mostrarTarjetas(tarjetas, elementoIdAmarillas, elementoIdRojas) {
     });
 }
 
-// Cargar datos desde el archivo JSON
-fetch('datos.json')
-    .then(response => response.json())
-    .then(data => {
-        // Mostrar goleadores
-        mostrarGoleadores(data.goleadoresHombres, "goleadores-hombres");
-
-        // Mostrar tarjetas amarillas y rojas
-        mostrarTarjetas(data.tarjetasHombres, "tarjetas-amarillas-hombres", "tarjetas-rojas-hombres");
-    })
-    .catch(error => console.error('Error al cargar los datos:', error));
-
 // Procesar el formulario para ingresar datos
 document.getElementById('formulario-datos').addEventListener('submit', function (e) {
     e.preventDefault(); // Evitar que el formulario se envíe
