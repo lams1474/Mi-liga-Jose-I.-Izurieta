@@ -1,99 +1,94 @@
-/* Estilos para el cuerpo de la página */
 body {
-    background-image: url('images/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    padding-bottom: 60px; /* Margen inferior para el pie de página */
+    background-color: #f4f4f4;
 }
 
-/* Encabezado */
 header {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
-    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
 header .logo {
-    width: 150px; /* Tamaño del logo */
+    width: 100px;
     height: auto;
 }
 
-/* Secciones */
+h1, h2 {
+    color: #333;
+}
+
 section {
-    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     margin: 20px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para partidos (calendarios y resultados) */
-.partido {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap; /* Ajusta los elementos en pantallas pequeñas */
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-.equipo {
-    text-align: center;
-    margin: 5px; /* Espaciado entre equipos */
+a:hover {
+    text-decoration: underline;
 }
 
-.equipo img {
-    width: 50px; /* Tamaño de los sellos */
-    height: auto;
-}
-
-/* Tabla de posiciones */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
-    display: block; /* Hace que la tabla sea un bloque */
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
 }
 
 th, td {
     padding: 10px;
     text-align: center;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/* Estilos para el pie de página */
+th {
+    background-color: #f2f2f2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
 footer {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    width: 100%;
-    position: relative; /* Cambia a posición relativa */
-    bottom: 0;
-}
-
-/* Estilos para móviles */
-@media (max-width: 768px) {
-    header .logo {
-        width: 100px; /* Reduce el logo en móviles */
-    }
-
-    .equipo img {
-        width: 40px; /* Reduce el tamaño de los sellos en móviles */
-    }
-
-    table {
-        font-size: 12px; /* Reduce el tamaño de la fuente en las tablas */
-    }
-
-    section {
-        padding: 10px;
-        margin: 10px;
-    }
+    margin-top: 20px;
 }
