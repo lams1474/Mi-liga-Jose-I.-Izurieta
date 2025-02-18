@@ -131,3 +131,51 @@ video {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+/* Estilos para la sección de reglamentos */
+#reglamentos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.pdf-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pdf-item {
+    flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas grandes */
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border: none;
+    border-radius: 8px;
+}
+
+.pdf-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.pdf-item p {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.pdf-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pdf-item a:hover {
+    text-decoration: underline;
+}
