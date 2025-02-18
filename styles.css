@@ -5,13 +5,12 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1.5rem;
+    padding: 20px;
     text-align: center;
 }
 
@@ -22,12 +21,11 @@ header .logo {
 
 h1, h2 {
     margin: 0;
-    font-size: 2rem; /* Tamaño relativo */
 }
 
 section {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
+    padding: 20px;
+    margin: 20px auto;
     max-width: 800px;
     background-color: white;
     border-radius: 8px;
@@ -36,13 +34,13 @@ section {
 
 .enlaces-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .enlace-rectangulo {
     background-color: #4CAF50;
-    padding: 1rem;
+    padding: 15px;
     text-align: center;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -62,32 +60,32 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
     width: 100%;
-    position: relative;
-    bottom: auto;
+    position: relative; /* Cambiado de fixed a relative */
+    bottom: auto; /* Eliminado el bottom fijo */
 }
 
 /* Estilos para el formulario */
 #ingreso-datos {
     display: none;
     background-color: #f9f9f9;
-    padding: 1.5rem;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #formulario-datos label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
 #formulario-datos input,
 #formulario-datos select {
     width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -95,7 +93,7 @@ footer {
 #formulario-datos button {
     background-color: #4CAF50;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -106,38 +104,24 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.75rem;
-    }
-
-    section {
-        padding: 1rem;
-        margin: 1rem;
-    }
-
+@media (max-width: 600px) {
     .enlaces-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
-}
 
-@media (max-width: 480px) {
     header h1 {
         font-size: 1.5rem;
     }
 
-    .enlaces-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
-
-    .pdf-item {
-        flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+    section {
+        padding: 15px;
+        margin: 10px;
     }
 }
 
 /* Estilos para los contenedores de video */
 .video-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -148,24 +132,25 @@ video {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Estilos para la sección de reglamentos */
 #reglamentos {
-    padding: 1.5rem;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    margin: 1.5rem 0;
+    margin: 20px 0;
 }
 
 .pdf-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .pdf-item {
-    flex: 1 1 calc(50% - 1.5rem); /* Dos columnas en pantallas grandes */
+    flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas grandes */
     background-color: #fff;
-    padding: 1rem;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -174,18 +159,15 @@ video {
 iframe {
     border: none;
     border-radius: 8px;
-    width: 100%;
-    height: 500px; /* Altura fija para iframes */
 }
 
 .pdf-item h3 {
     margin-top: 0;
     color: #333;
-    font-size: 1.25rem;
 }
 
 .pdf-item p {
-    margin: 0.5rem 0 0;
+    margin: 10px 0 0;
     text-align: center;
 }
 
