@@ -3,121 +3,119 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #00FF00;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #00FFFF;
-    color: #333;
-    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
 header .logo {
-    width: 100px;
+    max-width: 100px;
     height: auto;
 }
 
 h1, h2 {
-    color: #333;
+    margin: 0;
 }
 
 section {
     padding: 20px;
-    margin: 20px;
-    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input, form select, form button {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-form button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-/* Estilos para los enlaces rápidos en rectángulos */
 .enlaces-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    padding: 20px;
 }
 
 .enlace-rectangulo {
-    background-color: #007BFF;
-    border-radius: 5px;
-    text-align: center;
-    width: 200px;
+    background-color: #4CAF50;
     padding: 15px;
-    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .enlace-rectangulo a {
     color: white;
     text-decoration: none;
-    display: block;
+    font-weight: bold;
 }
 
 .enlace-rectangulo:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Cambiado de fixed a relative */
+    bottom: auto; /* Eliminado el bottom fijo */
+}
+
+/* Estilos para el formulario */
+#ingreso-datos {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-datos label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#formulario-datos input,
+#formulario-datos select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formulario-datos button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#formulario-datos button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .enlaces-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
