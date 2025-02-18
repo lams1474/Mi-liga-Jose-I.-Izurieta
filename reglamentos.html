@@ -1,44 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <img src="images/logo-liga.png" alt="Logo de la Liga" class="logo">
-        <h1>Liga Deportiva Barrial José I. Izurieta</h1>
-    </header>
-
-    <section id="reglamentos">
-        <h2>Reglamentos PDF</h2>
-
-        <!-- Ejemplo de cómo agregar un PDF -->
-        <div class="pdf-calendario">
+<!-- Sección de reglamentos -->
+<section id="reglamentos">
+    <h2>Reglamentos</h2>
+    <div class="pdf-container">
+        <!-- Reglamento de Fútbol -->
+        <div class="pdf-item">
+            <h3>Reglamento de Fútbol</h3>
             <iframe src="images/reglamentos futbol-1.pdf" width="100%" height="500px">
                 Tu navegador no soporta iframes. <a href="images/reglamentos futbol-1.pdf">Descargar PDF</a>
             </iframe>
-            <p>Esta semana se suspendió el fútbol sala por motivos ajenos a la liga.</p>
-            <a href="images/reglamentos futbol-1.pdf" download>Descargar PDF</a>
+            <p>Descargar: <a href="images/reglamentos futbol-1.pdf" download>Reglamento de Fútbol</a></p>
         </div>
 
-        <!-- Otro ejemplo de PDF -->
-        <div class="pdf-calendario">
+        <!-- Reglamento de Futsala -->
+        <div class="pdf-item">
+            <h3>Reglamento de Futsala</h3>
             <iframe src="images/reglamentos futsala-1.pdf" width="100%" height="500px">
                 Tu navegador no soporta iframes. <a href="images/reglamentos futsala-1.pdf">Descargar PDF</a>
             </iframe>
-            <p>Esta semana se suspendió el fútbol sala por motivos ajenos a la liga.</p>
-            <a href="images/reglamentos futsala-1.pdf" download>Descargar PDF</a>
+            <p>Descargar: <a href="images/reglamentos futsala-1.pdf" download>Reglamento de Futsala</a></p>
         </div>
-
-        <!-- Puedes agregar más PDFs según sea necesario -->
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Liga Deportiva Barrial José I. Izurieta</p>
-        <p>Contacto: info@ligabarrial.com</p>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
